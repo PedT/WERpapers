@@ -56,15 +56,14 @@
 			num_downloads = counter_table[p.name_conference.."/"..p.file_name]["downloads"]
 	  end
       -- print each paper published
-      cgilua.print(string.format(
+	  cgilua.print(string.format(
         "<p style='margin-left: 10'><font face='Arial'>%s - <b>%s</b>. <i>%s,"
-        .." %s. </i>"..anais_string..", pp %s. <b><a href='%s?wer=%s&file_name"
-        .."=%s' target='_blank'>[pdf]</a> <a href='%s' target='_blank'>"
-        .."[scholar]</a> Downloads: %s</b></font></p> <p align='justify'"
+        .." %s. </i>"..anais_string..", pp %s. <b><a href='"..cfg["paper_folder"].."%s".."/".."%s'"
+        .."target='_blank'>[pdf]</a> <a href='%s' target='_blank'>"
+        .."[scholar]</a></b></font></p> <p align='justify'"
         .."style='margin-left: 30'><font face='Arial' size='2'><b>Abstract: "
         .."</b> %s</font></p></table>", i, p.paper_title, p.author,
-        p.add_author, p.page, cfg["file_counter"], p.name_conference,
-        p.file_name, scholar_url, num_downloads, p.abstract or ""
+        p.add_author, p.page, p.name_conference, p.file_name, scholar_url, p.abstract or ""
       ))
       i = i + 1
     end

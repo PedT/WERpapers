@@ -4,7 +4,7 @@ return {
 image_folder = "/imagens/",
 
 --[[ papers ]]--
-paper_folder = "/home/b/wer/public_html/WERpapers/artigos/artigos_",
+paper_folder = "artigos/artigos_",
 
 --[[ counters ]]--
 counter_folder = "/home/b/wer/public_html/WERpapers/file_db/",
