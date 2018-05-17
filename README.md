@@ -1,5 +1,6 @@
 # WERpapers
 Repositorio de artigos do Workshop de Engenharia de Requisitos
+Grupo: Felipe, Gustavo, Pedro Andrade e Pedro Pinho
 
 Banco de dados na pasta wer.sql
 
