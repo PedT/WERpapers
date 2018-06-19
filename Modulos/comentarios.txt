@@ -1,0 +1,12 @@
+﻿Comentário no código:
+
+pré-condição
+pós-condiçãojustificativa: porque X faz a transformação de pre V para pós V
+
+
+antes de botar por artigo:
+editor, title, publisher, ISBN, year -> ficam numa página antes do cara ir mandando os artigos
+
+@proceedings
+
+depois articles

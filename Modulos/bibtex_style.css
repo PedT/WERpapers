@@ -1,0 +1,55 @@
+body {
+	font-family: "Times New Roman";
+}
+
+.grid_proceeding {
+	color: #0000FF;
+	display: grid;
+	height: 100px;
+	width: auto;
+	grid-template-rows: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	
+	
+	
+}
+
+.grid_articles {
+	color: #00F;
+	display: grid;
+	height: auto;
+	width: auto;
+	grid-template-rows: 1fr 2fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr; 
+	
+	
+	
+}
+
+h1 {
+	color: #0000FF;
+}
+
+textarea{
+	resize: none;
+	height:100px;
+	width: 97%;
+	
+}
+
+.four {
+	grid-row: 2 / span 1;
+	grid-column: 1 / span 3;
+}
+
+input {
+	width: 90%;
+	height: 100%;
+}
+
+#bt_submit {
+	width: auto;
+	height: auto;
+	allign: left;
+}
+
