@@ -22,6 +22,17 @@ var isDisabled = false;
 *	Pós condição: variável globalText com conteúdo do arquivo .bib atualizado ou finalizado.
 *				  variável filename completa.
 *				  variável json_artigos atualizado ou completo.
+*
+*	Justificativa: 
+*			A funcao chega aos resultados esperados pois: No primeiro clique do botão update ela inclui os conteúdos de <form id="frm1">, que correspondem ao proceedings, e guarda 
+*			na variavel globalText, e então concatena o conteudo de <form id="frm2"> em globalText, na formatacao correta. A cada clique subsequente do botão update, o conteudo de
+*			<form id="frm2"> vai sendo concatenado em globalText.
+*			
+*			A variavel json_artigos começa com uma string vazia (""). A cada clique do botão update, a função concatena o conteudo de <form id="frm2"> na variavel, com a formatacao 
+*			correta. Alem disso, a cada clique eh gerado o link da query do google scholar, utilizando o titulo do artigo e o sobrenome do primeiro autor.
+*			
+*			A variavel filename, é preenchida no primeiro clicar do botão update, concatenando a string "WER" com os dois ultimos numerais do campo <input type="text" name="year">.
+*			Exemplo: year = 2018 => filename = "WER18"
 */
 function update() {
     var x = document.getElementById("frm1");
@@ -150,6 +161,9 @@ function update() {
 *	Pré condição: variável globalText completamente preenchida
 *				  
 *	Pós condição: download do arquivo .bib completo.
+*
+*	Justificativa: 
+*			O arquivo .bib eh gerado pois ele pega o conteudo da variavel globalText, atribui a uma variavel temporaria, e gera o download a partir dessa variavel.
 */
 
 function writeFilesLocal() {
@@ -173,6 +187,10 @@ function writeFilesLocal() {
 *	Pré condição: variável json_artigos completamente preenchida
 *				  
 *	Pós condição: download do arquivo json completo, contendo os dados dos artigos e os respectivos links para as queries do google scholar.
+*
+*	Justificativa: 
+*			O arquivo json, com o link da query do google scholar, eh gerado pois ele pega o conteudo da variavel json_artigos, atribui a uma variavel temporaria, 
+*			e gera o download a partir dessa variavel.
 */
 
 function generateJsonLocal() {
@@ -196,6 +214,10 @@ if (confirm("Gerar Json?"))
 *	Pré condição: string podendo conter ou não caracteres com acento.
 *				  
 *	Pós condição: string com caracteres sem acento.
+
+	Justificativa:
+				A funcao retorna uma copia da string passada como parametro pois substitui todos os caracteres da string passada como parametro, olha um a um e substitui qualquer
+				caracter com acento pelo seu equivalente sem acento.
 
 	Função desenvolvida por Mario Luan. Creditos: (https://gist.github.com/marioluan/6923123)
 */
