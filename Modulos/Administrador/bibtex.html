@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BibTeX Online Editor</title>
+	<link rel='stylesheet' type='text/css' href='bibtex_style.css'>
+</head>
+
+<body bgproperties="fixed" background="imagens/eng_req.jpg">
+
+<p align="center"><img border="0" src="imagens/logo_wer_papers.jpg" width="169"height="102"></p>
+<h1 align="center">Administrator Interface</h1>
+
+
+<div class = "gridarea">
+	<div class = "left">
+		<p>Proceedings:</p>
+		<form id="frm1">
+			Editor: <br><input type="text" name="editor"><br>
+			Title: <br><input type="text" name="title"><br>
+			ISBN: <br><input type="text" name="isbn"><br>
+			Publisher: <br><input type="text" name="publisher"><br>
+			Year: <br><input type="text" name="year"><br><br>
+		</form>
+	</div>
+		
+	<div class = "bt">
+		<p id="demo"></p>
+	</div>
+	
+	<div class = "right">
+		<p>Articles:</p>
+		<form id="frm2">	
+			Key: <br><input type="text" id="fkey" name=""><br>
+			Author: <br><input type="text" id="fauthor" name="author"><br>
+			Title: <br><input type="text" id="ftitle" name="title"><br>
+			Abstract: <br><input type="text" id="fabstract" name="abstract"><br>
+			Journal: <br><input type="text" id="fjournal" name="journal"><br>
+			Volume: <br><input type="text" id="fvolume" name="volume"><br>
+			Number: <br><input type="text" id="fnumber" name="number"><br>
+			Pages: <br><input type="text" id="fpage" name="page"><br>
+			Month: <br><input type="text" id="fmonth" name="month"><br>
+			Note: <br><input type="text" id="fnote" name="note"><br>
+			Select a file: <input type="file" name="myFile">
+		</form> 
+	</div>
+	
+	
+</div>
+
+<p>Click "Update" to update the bibtex file with new articles. Click "Send" when you're done to generate the .bib file</p>
+
+<button onclick="update()">Update</button>
+<button onclick="writeFilesLocal()">Send</button>
+<button onclick="generateJsonLocal()">Json</button>
+
+
+<script src="bibtex_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+	font-family: "Times New Roman";
+}
+
+h1 {
+	color: #0000FF;
+}
+
+input {
+	width: 95%;
+	height: 100%;
+}
+
+.gridarea {
+	display: grid;
+	grid-template-areas: "left right"
+    				     "bt right"
+						 "bt right"
+						 "bt right";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:  1fr 100px 100px 100px;
+	column-gap: 40px;
+	row-gap: 5px;
+}
+
+.left{
+	grid-area:left;
+}
+
+.right{
+	grid-area:right;
+}
+
+.bt{
+	grid-area:bt;
+	overflow:scroll;
+}
+
+p {
+	font-weight: bold;
+}
+
